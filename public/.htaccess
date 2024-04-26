@@ -22,9 +22,6 @@ DirectoryIndex index.php
     # Send requests for the root path to public/index.php
     RewriteRule ^$ public/index.php [L]
 
-    # Send Requests To API Front Controller (assuming api/index.php is in the root folder)
-    RewriteRule ^api/.*$ /api/index.php [L]
-
     # Send Requests To Front Controller for everything else
     RewriteCond %{REQUEST_URI} !^/api  # Exclude API requests
     RewriteCond %{REQUEST_FILENAME} !-d
