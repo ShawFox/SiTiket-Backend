@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+    },
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://si-ticket-backend.vercel.app/",
+ 
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+ 
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+
+        "FIREBASE_CREDENTIALS":"{\"type\":\"service_account\",\"project_id\":\"sitiket-yuk\",\"private_key_id\":\"9a331cf112a839cda0a240000fee7a19558af202\",\"private_key\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDWr7FZkXzrY59\\nK9OcOhagqQfUyYkiglP8CsZpic2Z1AW0tGHS/kp0UP4FVKJpv8FuF5rce/Gd65At\\nezFDNbK/F3zhIal6nOnI48UnqHEe7N6Nmn6qS0+SBdMa9tO8Nk6pdW7DF7YTtkdL\\n9uM/g70MPPRM2FhuDi1xZb3Lr+zWFanLyEK/1Y/pOxeScS0ZPKhqmofyQunEdodI\\n9WxGJyUqeI60B0P9xQJOb3I1/WaeXCoXW82N4A1Bc8KuQdn6dp5gD6SPYnl8q78c\\nbcPc+0xzYwUS2vy2rYVZSfwoF7+h7twiKQoCy1TEdS9jHi/wgEA4OukcfQAbcMet\\n2WVd6EcLAgMBAAECggEAAYicV8tiQDP8GuJ1slPIarF5BMQiRfmU9DUXcquoyAzg\\nkJcb736ckgYywFL2RXNCbv1Tc2irsGwxgRHnBJqO0S47hj7v6C0ELtYO7a1GWhJM\\n+vqcBPU7Zi+ShTMr3V3lxzHLUU/F16jGLYP+K7j6inaOCm5mX1LQK4Q7dbZnWxTj\\n7/BBftCCmL5mYd+rtwZXfaaC3uEx9vCENv0xoquHAKJMgtXJ5Ljk6tmS4YeaQ43d\\nFymdYafn2MjrnbAHbWaDnXizcHjRMyON6vtTjGpRGM4zWGc+I1q/QWczG4WtR1t0\\n6xdbXaJkbzaIPA4k/ofakCkIjs+AhVZ9e9mxtBHDHQKBgQDvLLocTVCM3DH5Smrs\\nt3O9Ke79msLYm9XKAGojHNLXagSFitcsYdKvsP01UghZTLOne7KeO8qhdF/i959G\\n+rZWkV97vOA+TH0ZQy1xO9kEF5HnusH5ms0NNz2N8NB8+4NrrVUMAz/8KH1XA162\\n0aQ3EyoEx8/xXBrEbEIXXDAvVQKBgQDRGN0sImhyIa+93YSXHFh11HKO381ElxkT\\nHI314teTlIRiKMo5r/R+B+5ETXNJ8c/+vSUO2Ak6shNs+D4B/gnpxhJ5V7reacYh\\nOmedpG9mZp2Kgljt6e2ZpO6SLe6LB5Paqe5igwX2iRO8N8Dw8qa/vwQYZ43LaAHD\\nZdM8Njrc3wKBgQDo2aanfy34tTeB+E15AHGRrI2cIVuo/q5450ZtwNYUGockbDNo\\nZiR0H9+kVaUDK4WMfQU8wAFahq4DjghnVhbG2OkY0p2OiXERczF+mEGDll7aOBw5\\nIdiYETvAQL75rvQXlLzD4TYeDF1apVFEs30okWPLG6z60izNJoiBraLLsQKBgCCE\\njWDfuP6G3p3YZVZawicQ8v/lLjcMiInAVxN2Q7Bf2HargUeXZZ5z/UoCAXvubzpe\\nj/TPBCBssTixInOM3l3Mv/K/AgC00ms4egS6Hdj+/GEeBFZ7msfaLn/tRLu6YfQP\\nmVMYrUS57KfIw+i009neCvUApbyMYDnTDBbBGEZhAoGAESVvb1F0ufo72gOGj5Nb\\nO1Y0NxEjjjB+vHILMErHs6hRtXxU2KN4ZRGW8r/Po5atk1KZyw3I4sOqzu8eQ3zS\\nPcCGMSR8m1PlBZ4JTz23KMC8pWJ4/3CrL2SEEMx7OVrmDR5K2YjueTefhw63OAZS\\ngAvstwK6hbsclu3oCtGj1vc=\\n-----END PRIVATE KEY-----\\n\",\"client_email\":\"firebase-adminsdk-wkt5a@sitiket-yuk.iam.gserviceaccount.com\",\"client_id\":\"103091302550156506508\",\"auth_uri\":\"https://accounts.google.com/o/oauth2/auth\",\"token_uri\":\"https://oauth2.googleapis.com/token\",\"auth_provider_x509_cert_url\":\"https://www.googleapis.com/oauth2/v1/certs\",\"client_x509_cert_url\":\"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wkt5a%40sitiket-yuk.iam.gserviceaccount.com\",\"universe_domain\":\"googleapis.com\"}",
+        "FIREBASE_DATABASE_URL":"https://sitiket-yuk-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        "FIREBASE_STORAGE":"gs://sitiket-yuk.appspot.com"
+    },
+    "outputDirectory": "public"
+}
