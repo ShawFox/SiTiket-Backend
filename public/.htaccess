@@ -1,29 +1,20 @@
-DirectoryIndex index.php
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
 
     RewriteEngine On
-    RewriteBase /test/  # Keep this base for application functionality
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
-    # Rewrite all requests except for the public folder to public/index.php
-    RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
-
-    # Send requests for the root path to public/index.php
-    RewriteRule ^$ public/index.php [L]
-
-    # Send Requests To Front Controller for everything else
-    RewriteCond %{REQUEST_URI} !^/api  # Exclude API requests
+    # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
